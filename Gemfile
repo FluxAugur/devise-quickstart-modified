@@ -41,9 +41,14 @@ gem 'spring',        group: :development
 # HAML Rails Generators
 gem 'haml-rails'
 
+# Twitter Bootstrap 3.0 Front-End Framework
+gem 'boostrap-sass'
+
 group :development do
   # RailsApps Testing Framework to set up and configure testing
   gem 'rails_apps_testing'
+  # RailsApps Layout to set up and configure views for front-end framework
+  gem 'rails_layout'
 end
 
 group :development, :test do

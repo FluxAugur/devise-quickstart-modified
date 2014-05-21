@@ -29,6 +29,10 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.6)
     arel (5.0.1.20140414130214)
+    boostrap-sass (0.0.2)
+      bootstrap-sass
+    bootstrap-sass (3.1.1.1)
+      sass (~> 3.2)
     builder (3.2.2)
     capybara (2.2.1)
       mime-types (>= 1.16)
@@ -97,6 +101,7 @@ GEM
       railties (= 4.1.0)
       sprockets-rails (~> 2.0)
     rails_apps_testing (0.2.1)
+    rails_layout (1.0.16)
     railties (4.1.0)
       actionpack (= 4.1.0)
       activesupport (= 4.1.0)
@@ -164,6 +169,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  boostrap-sass
   capybara
   coffee-rails (~> 4.0.0)
   database_cleaner
@@ -174,6 +180,7 @@ DEPENDENCIES
   launchy
   rails (= 4.1.0)
   rails_apps_testing
+  rails_layout
   rspec-rails
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
