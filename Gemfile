@@ -38,9 +38,6 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-# Use HAML templating engine and HAML rails generators
-gem 'haml-rails'
-
 # Use Twitter Bootstrap 3.0 front-end framework
 gem 'boostrap-sass'
 
@@ -48,8 +45,12 @@ gem 'boostrap-sass'
 gem 'devise'
 
 group :development do
+  # Use HAML templating engine and HAML rails generators
+  gem 'haml-rails'
+
   # RailsApps Testing Framework to set up and configure testing
   gem 'rails_apps_testing'
+
   # RailsApps Layout to set up and configure views for front-end framework
   gem 'rails_layout'
 end
