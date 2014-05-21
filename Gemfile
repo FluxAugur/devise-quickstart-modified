@@ -1,68 +1,80 @@
 source 'https://rubygems.org'
+ruby '2.1.1'
 
-
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+# Framework & Bundler
 gem 'rails', '4.1.0'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .js.coffee assets and views
+gem 'bundler', '1.6.2'
+
+# Authentication, Authorization, & User Management
+gem 'devise', '~> 3.2.4'
+# gem 'pundit', '~> 0.2.3'
+
+# Stylesheets, Views, & Templates
+gem 'bootstrap-sass', '~> 3.1.1.1'
 gem 'coffee-rails', '~> 4.0.0'
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+gem 'haml-rails', '~> 0.5.3'
+gem 'sass-rails', '~> 4.0.3'
+gem 'rails_layout', '~> 1.0.14'
+# gem 'simple_form', '~> 3.0.2'
+# gem 'will_paginate-bootstrap', '~> 1.0.0'
+
+# JavaScript & Links
+gem 'jbuilder', '~> 2.0.6'
+gem 'jquery-rails', '~> 3.1.0'
 # gem 'therubyracer',  platforms: :ruby
-
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
-
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+gem 'turbolinks', '~> 2.2.2'
+gem 'uglifier', '>= 2.5.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use unicorn as the app server
-# gem 'unicorn'
+# Deployment
+group :deployment do
+  # gem 'capistrano', '~> 3.1.0'
+  # gem 'capistrano-bundler', '~> 1.1.2'
+  # gem 'capistrano-rails', '~> 1.1.1'
+  # gem 'capistrano-rvm'
+end
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
-# Use Twitter Bootstrap 3.0 front-end framework
-gem 'boostrap-sass'
-
-# Use Devise for authentication and user management
-gem 'devise'
-
+# Development
 group :development do
-  # Use HAML templating engine and HAML rails generators
-  gem 'haml-rails'
-
   # RailsApps Testing Framework to set up and configure testing
   gem 'rails_apps_testing'
-
-  # RailsApps Layout to set up and configure views for front-end framework
-  gem 'rails_layout'
+  gem 'spring', '~> 1.1.2'
 end
 
-group :development, :test do
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
+# Documentation
+group :doc do
+  gem 'sdoc', '~> 0.4.0'
 end
 
+# Production
+group :production do
+  # gem 'unicorn'
+end
+
+# Testing
 group :test do
-  gem 'capybara'
-  gem 'database_cleaner'
-  gem 'launchy'
-  gem 'selenium-webdriver'
+  gem 'capybara', '~> 2.2.1'
+  # gem 'capybara-screenshot', '~> 0.3.19'
+  # gem 'cucumber-rails', '~> 1.4.0', :require => false # https://github.com/cucumber/cucumber-rails
+  gem 'database_cleaner', '~> 1.2.0' # https://github.com/bmabet/database_cleaner
+  # gem 'email_spec', '~> 1.5.0'
+  # gem 'faker', '~> 1.3.0' # http://rubydoc.info/github/stympy/faker/master/frames
+  gem 'launchy', '~> 2.4.2'
+  gem 'selenium-webdriver', '~> 2.41.0'
+  # gem 'shoulda-matchers', '~> 2.6.0' # https://github.com/thoughtbot/shoulda-matchers
+end
+
+# Development & Testing
+group :development, :test do
+  gem 'better_errors', '~> 1.1.0'
+  gem 'binding_of_caller', '~> 0.7.2', :platforms => [ :mri_19, :mri_20, :mri_21, :rbx ]
+  # gem 'debugger'
+  gem 'factory_girl_rails', '~> 4.4.1'
+  gem 'mailcatcher', '~> 0.2.4'
+  gem 'quiet_assets', '~> 1.0.2'
+  gem 'pry-rails', '~> 0.3.2'
+  gem 'rspec-rails', '~> 2.14.2'
+  gem 'sqlite3', '~> 1.3.9'
 end
